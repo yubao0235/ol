@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'hotels/REBORN.m3u'
+      - 'hotels/ALL.m3u'
 
 jobs:
   refresh:
@@ -43,12 +43,13 @@ jobs:
 
       - name: IPTV Speed Test
         run: |
-          echo "⚡ 对最新 REBORN.m3u 执行测速..."
+          echo "⚡ 对最新 ALL.m3u 执行测速..."
           if [ -f "py/traffic_test.py" ]; then
             python py/traffic_test.py
           else
             echo "⚠️ 找不到测速脚本"
           fi
+
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
