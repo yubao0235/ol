@@ -1,6 +1,7 @@
+
 import os, shutil, re
 
-HOTEL_OUTPUT = "py/Hotel/hotel_output.txt"
+HOTEL_OUTPUT = "hotel_output.txt"
 REBORN_DIR = "./hotels"
 LOGO_BASE_URL = "https://tb.yubo.qzz.io/logo/"
 
@@ -36,7 +37,7 @@ def rebuild():
         with open(os.path.join(REBORN_DIR, f"REBORN_{safe_host}.m3u"), "w", encoding="utf-8") as f_out:
             f_out.write("\n".join(single_m3u))
 
-    with open(os.path.join(REBORN_DIR, "REBORN.m3u"), "w", encoding="utf-8") as f_all:
+    with open(os.path.join(REBORN_DIR, "ALL.m3u"), "w", encoding="utf-8") as f_all:
         f_all.write("\n".join(all_m3u))
     print(f"🌟 洗版完成！")
 
