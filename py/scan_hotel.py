@@ -2,7 +2,7 @@ import os, re, requests, concurrent.futures
 from urllib.parse import urlparse
 
 # ================= 配置区 =================
-HOTEL_DIR = ".hotel"
+HOTEL_DIR = "./hotel"
 RESULT_TXT = "hotel_output.txt" 
 TIMEOUT = 3 
 MAX_WORKERS = 150 # 爆破时线程数建议保持在高位
